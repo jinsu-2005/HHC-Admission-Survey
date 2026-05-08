@@ -10,17 +10,17 @@ interface ThemeContextValue {
 }
 
 const ThemeContext = createContext<ThemeContextValue>({
-  theme: "light",
+  theme: "dark",
   toggle: () => {},
 });
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
 
-  // On mount, read from localStorage or default to light
+  // On mount, read from localStorage or default to dark
   useEffect(() => {
     const stored = localStorage.getItem("hcc_theme") as Theme | null;
-    const resolved = stored ?? "light";
+    const resolved = stored ?? "dark";
     setTheme(resolved);
     document.documentElement.classList.toggle("dark", resolved === "dark");
   }, []);

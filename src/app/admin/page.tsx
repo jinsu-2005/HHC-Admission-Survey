@@ -115,14 +115,14 @@ export default function AdminDashboard() {
               <div>
                 <label className="block text-sm font-medium mb-1" style={{ color: 'var(--text-secondary)' }}>Password</label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                     <Lock className="h-4 w-4 text-slate-400" />
                   </div>
                   <input
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="hcc-input pl-9 text-sm"
+                    className="hcc-input pr-9 text-sm"
                     placeholder="Enter password"
                     autoComplete="current-password"
                   />
