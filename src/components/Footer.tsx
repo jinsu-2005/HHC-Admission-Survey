@@ -28,7 +28,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-3">
               <Mail size={20} className="shrink-0 text-hcc-gold" />
-              <span className="text-sm">admission@holycrossngl.edu.in</span>
+              <span className="text-sm">Contact Administration</span>
             </div>
           </div>
         </div>
@@ -37,8 +37,8 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="/" className="hover:text-hcc-gold transition-colors">Home</a></li>
-            <li><a href="#" className="hover:text-hcc-gold transition-colors">Programs</a></li>
-            <li><a href="#" className="hover:text-hcc-gold transition-colors">Campus Life</a></li>
+            <li><a href="https://holycrossngl.edu.in/" target="_blank" rel="noopener noreferrer" className="hover:text-hcc-gold transition-colors">Official Website</a></li>
+            <li><a href="https://www.youtube.com/@holycrosscollegenagercoil/videos" target="_blank" rel="noopener noreferrer" className="hover:text-hcc-gold transition-colors">YouTube Channel</a></li>
             <li><a href="/admin" className="hover:text-hcc-gold transition-colors">Admin Login</a></li>
           </ul>
         </div>

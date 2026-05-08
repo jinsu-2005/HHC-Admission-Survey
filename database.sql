@@ -3,20 +3,21 @@
 -- Create the survey_responses table
 CREATE TABLE IF NOT EXISTS public.survey_responses (
     id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
-    full_name TEXT NOT NULL,
-    mobile TEXT NOT NULL,
-    district TEXT NOT NULL,
-    study_plan TEXT NOT NULL,
+    session_id TEXT UNIQUE NOT NULL,
+    full_name TEXT,
+    mobile TEXT,
+    district TEXT,
+    study_plan TEXT[] DEFAULT '{}',
     course_interest TEXT[] DEFAULT '{}',
-    distance TEXT NOT NULL,
-    transportation_issue TEXT NOT NULL,
-    interest_level TEXT NOT NULL,
+    distance TEXT,
+    transportation_issue TEXT,
+    interest_level TEXT,
     not_interested_reasons TEXT[] DEFAULT '{}',
     other_reason TEXT,
-    consent BOOLEAN NOT NULL DEFAULT false,
-    preferred_contact TEXT NOT NULL,
-    best_time TEXT NOT NULL,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+    preferred_contact TEXT,
+    best_time TEXT,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 
 -- Set up Row Level Security (RLS)
@@ -26,6 +27,11 @@ ALTER TABLE public.survey_responses ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Allow anonymous inserts" ON public.survey_responses
     FOR INSERT
     WITH CHECK (true);
+
+-- Create policy to allow anonymous updates based on session_id
+CREATE POLICY "Allow anonymous updates" ON public.survey_responses
+    FOR UPDATE
+    USING (true);
 
 -- Create policy to allow read access (for admin dashboard, assuming anon key is used there as well for simplicity, 
 -- but in production you should use an authenticated role or service role key for the admin panel)

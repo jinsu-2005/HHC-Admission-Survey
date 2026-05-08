@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import FloatingContact from "@/components/FloatingContact";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Holy Cross College - Admission Guidance",
@@ -14,13 +15,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased bg-gray-50 dark:bg-slate-900 min-h-screen flex flex-col">
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
-        <FloatingContact />
+    <html lang="en" suppressHydrationWarning>
+      <body className="antialiased min-h-screen flex flex-col bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-200">
+        <ThemeProvider>
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+          <FloatingContact />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -2,44 +2,147 @@
 
 @theme {
   --color-hcc-blue: #0B3D91;
-  --color-hcc-gold: #FFB81C;
-  --color-hcc-gray: #F3F4F6;
-  --color-hcc-dark: #1F2937;
+  --color-hcc-gold: #F59E0B;
+  --color-hcc-gray: #F8FAFC;
+  --color-hcc-dark: #1E293B;
 }
 
-@layer base {
-  :root {
-    --background: #ffffff;
-    --foreground: #171717;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: #0f172a;
-      --foreground: #f8fafc;
-    }
-  }
+/* ── Light-mode base ─────────────────────────────── */
+:root {
+  --bg-page: #f0f4f8;
+  --bg-card: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --input-bg: #ffffff;
+  --input-text: #1e293b;
+  --input-placeholder: #94a3b8;
+  --input-border: #d1d5db;
+}
+
+/* ── Dark-mode base ──────────────────────────────── */
+.dark {
+  --bg-page: #0f172a;
+  --bg-card: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+  --input-bg: #0f172a;
+  --input-text: #f1f5f9;
+  --input-placeholder: #64748b;
+  --input-border: #475569;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
+/* ── Glass card ────────────────────────────────────
+   Light: near-white with subtle backdrop blur
+   Dark:  dark slate with blur
+*/
 .glass-card {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(11, 61, 145, 0.1);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 40px 0 rgba(11, 61, 145, 0.12);
 }
 
 .dark .glass-card {
-  background: rgba(15, 23, 42, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(30, 41, 59, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.4);
 }
 
+/* ── Form inputs — theme-aware ────────────────────── */
+.hcc-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  font-size: 0.9375rem;
+}
+
+.hcc-input::placeholder {
+  color: var(--input-placeholder);
+}
+
+.hcc-input:focus {
+  border-color: #0B3D91;
+  box-shadow: 0 0 0 3px rgba(11, 61, 145, 0.15);
+}
+
+/* ── Choice buttons (survey) ──────────────────────── */
+.hcc-choice {
+  padding: 0.625rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  text-align: left;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s;
+  font-size: 0.875rem;
+}
+
+.hcc-choice:hover {
+  border-color: #0B3D91;
+  background-color: rgba(11, 61, 145, 0.04);
+}
+
+.hcc-choice.selected {
+  border-color: #0B3D91;
+  background-color: rgba(11, 61, 145, 0.08);
+  color: #0B3D91;
+  font-weight: 600;
+}
+
+.dark .hcc-choice.selected {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  border-color: #3b82f6;
+}
+
+/* ── Pill choice (course tags) ───────────────────── */
+.hcc-pill {
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-color);
+  background-color: var(--input-bg);
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  transition: all 0.15s;
+}
+
+.hcc-pill:hover {
+  border-color: #0B3D91;
+}
+
+.hcc-pill.selected {
+  background-color: #0B3D91;
+  border-color: #0B3D91;
+  color: white;
+  font-weight: 600;
+}
+
+/* ── Progress bar ─────────────────────────────────── */
 .progress-bar {
   transition: width 0.4s ease-in-out;
 }
+
+/* ── Scrollbar ────────────────────────────────────── */
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #475569; }
