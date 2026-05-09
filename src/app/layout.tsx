@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     siteName: "Holy Cross College",
     images: [
       {
-        url: "/hccngl.png",
-        secureUrl: "/hccngl.png",
+        url: "/hccngl.png?v=1",
+        secureUrl: "/hccngl.png?v=1",
         width: 500,
         height: 500,
         type: "image/png",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Holy Cross College - Admission Guidance",
     description: "Join Holy Cross College, Nagercoil. Tell us your higher education plans and our admission team will guide you personally.",
-    images: ["/hccngl.png"],
+    images: ["/hccngl.png?v=1"],
   },
 };
 
@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" prefix="og: http://ogp.me/ns#" suppressHydrationWarning>
       <body className="antialiased min-h-screen flex flex-col bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-200">
         <ThemeProvider>
           <main className="flex-grow">
