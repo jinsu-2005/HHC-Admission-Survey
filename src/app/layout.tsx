@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://hhc-admission-survey.vercel.app"),
   title: "Holy Cross College - Admission Guidance",
   description: "Join Holy Cross College, Nagercoil. Tell us your higher education plans and our admission team will guide you personally.",
+  applicationName: "Holy Cross College Survey",
+  keywords: ["Holy Cross College", "Admission", "Nagercoil", "Survey", "Education"],
+  alternates: {
+    canonical: "https://hhc-admission-survey.vercel.app",
+  },
   icons: {
     icon: "/hccngl.png",
     apple: "/hccngl.png",
@@ -19,8 +24,8 @@ export const metadata: Metadata = {
     siteName: "Holy Cross College",
     images: [
       {
-        url: "https://hhc-admission-survey.vercel.app/hccngl.png?v=1",
-        secureUrl: "https://hhc-admission-survey.vercel.app/hccngl.png?v=1",
+        url: "https://hhc-admission-survey.vercel.app/hccngl.png",
+        secureUrl: "https://hhc-admission-survey.vercel.app/hccngl.png",
         width: 500,
         height: 500,
         type: "image/png",
@@ -34,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Holy Cross College - Admission Guidance",
     description: "Join Holy Cross College, Nagercoil. Tell us your higher education plans and our admission team will guide you personally.",
-    images: ["https://hhc-admission-survey.vercel.app/hccngl.png?v=1"],
+    images: ["https://hhc-admission-survey.vercel.app/hccngl.png"],
   },
 };
 
