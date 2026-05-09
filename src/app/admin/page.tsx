@@ -25,7 +25,7 @@ export default function AdminDashboard() {
         setIsAuthenticated(true);
         setData(json.data);
       }
-    } catch (e) {}
+    } catch (e) { }
   };
 
   useEffect(() => { checkAuth(); }, []);
@@ -298,7 +298,7 @@ export default function AdminDashboard() {
               />
               <input
                 type="text"
-                placeholder="Search by name, phone, district…"
+                placeholder="    Search by name, phone, district…"
                 className="hcc-input pl-9 text-sm py-2"
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
