@@ -87,7 +87,7 @@ export default function AdminDashboard() {
         <div className="absolute top-4 right-4"><ThemeToggle /></div>
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <div className="flex justify-center mb-4">
-            <img src="/hccngl.jpg" alt="HCC Logo" className="h-16 w-16 rounded-full object-cover shadow-md border-2 border-hcc-blue/20" />
+            <img src="/hccngl.png" alt="HCC Logo" className="h-16 w-16 rounded-full object-cover shadow-md border-2 border-hcc-blue/20" />
           </div>
           <h2 className="text-center text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Admin Portal</h2>
           <p className="mt-1 text-center text-sm" style={{ color: "var(--text-secondary)" }}>Holy Cross College — Secure Access</p>

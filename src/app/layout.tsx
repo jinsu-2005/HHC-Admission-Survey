@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   title: "Holy Cross College - Admission Guidance",
   description: "Join Holy Cross College, Nagercoil. Tell us your higher education plans and our admission team will guide you personally.",
   icons: {
-    icon: "/hccngl.jpg",
-    apple: "/hccngl.jpg",
+    icon: "/hccngl.png",
+    apple: "/hccngl.png",
   },
 };
 

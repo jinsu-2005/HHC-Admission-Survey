@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="flex justify-between h-20">
           <div className="flex items-center gap-3">
             <div className="h-12 w-12 rounded-lg overflow-hidden shrink-0 shadow-sm border border-gray-100 dark:border-slate-700">
-              <img src="/hccngl.jpg" alt="HCC Logo" className="w-full h-full object-cover" />
+              <img src="/hccngl.png" alt="HCC Logo" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-hcc-blue dark:text-blue-400 text-lg sm:text-xl leading-tight">
