@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/hccngl.png",
-        width: 800,
-        height: 800,
+        width: 500,
+        height: 500,
         alt: "Holy Cross College Logo",
       },
     ],
