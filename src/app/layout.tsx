@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hcc-survey.vercel.app"), // Replace with your actual domain
+  metadataBase: new URL("https://hhc-admission-survey.vercel.app"),
   title: "Holy Cross College - Admission Guidance",
   description: "Join Holy Cross College, Nagercoil. Tell us your higher education plans and our admission team will guide you personally.",
   icons: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Holy Cross College - Admission Guidance",
     description: "Join Holy Cross College, Nagercoil. Tell us your higher education plans and our admission team will guide you personally.",
-    url: "https://hcc-survey.vercel.app", // Fallback URL, update if different
+    url: "https://hhc-admission-survey.vercel.app",
     siteName: "Holy Cross College",
     images: [
       {
