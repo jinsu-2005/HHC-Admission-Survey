@@ -15,11 +15,11 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="relative pt-20 pb-12 lg:pt-32 lg:pb-24 overflow-hidden min-h-[60vh] flex items-center">
         <div className="absolute inset-0 bg-hcc-blue z-0">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-hcc-blue/90 via-hcc-blue/70 to-hcc-blue/95"></div>
         </div>
 
@@ -36,14 +36,14 @@ export default function Home() {
                 Tell us your higher education plans and our admission team will guide you personally towards the right career path.
               </p>
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
-                <a 
-                  href="#fullName" 
+                <a
+                  href="#fullName"
                   className="bg-hcc-gold hover:bg-yellow-500 text-hcc-dark px-8 py-3.5 rounded-full font-bold transition-transform hover:scale-105 shadow-lg flex items-center gap-2"
                 >
                   Start Survey
                 </a>
-                <a 
-                  href="tel:+918838517277" 
+                <a
+                  href="tel:+918838517277"
                   className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-3.5 rounded-full font-bold transition-all flex items-center gap-2"
                 >
                   Call Now

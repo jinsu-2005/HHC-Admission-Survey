@@ -1,4 +1,4 @@
-import { Phone, MapPin, Mail, Globe } from "lucide-react";
+import { Phone, MapPin, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -10,9 +10,6 @@ export default function Footer() {
             Empowering women since 1965 through quality education and holistic development.
             NAAC A++ Accredited.
           </p>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-white transition-colors"><Globe size={20} /></a>
-          </div>
         </div>
         
         <div>
